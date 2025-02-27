@@ -1,104 +1,147 @@
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payoo MFS</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payoo MFS</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-slate-800">
-    <section class="max-w-md min-h-screen mx-auto p-6 bg-gray-200">
-        <!--Header part added-->
-        <div class="flex justify-between items-center mb-4">
-            <div class="flex justify-start items-center gap-2">
-                <img class="max-w-[20%]" src="./assets/payoo.png" alt="">
-                <div>
-                    <h1 class="text-xl font-bold">$<span id="mainbalance">45000</span></h1>
-                    <p class="text-gray-600">Available Balance</p>
-                </div>
-            </div>
-            <button class="btn border-slate-200 bg-blue-400 hover:bg-sky-300 text-white"><img src="./assets/Frame.png"
-                    alt=""> Log Out</button>
+  <section class="max-w-md min-h-screen mx-auto p-6 bg-gray-200">
+    <!--Header part added-->
+    <div class="flex justify-between items-center mb-4">
+      <div class="flex justify-start items-center gap-2">
+        <img class="max-w-[20%]" src="./assets/payoo.png" alt="">
+        <div>
+          <h1 class="text-xl font-bold">$<span id="mainbalance">100</span></h1>
+          <p class="text-gray-600">Available Balance</p>
         </div>
-        <hr class="border-[black]">
-        <!--Welcome part-->
-        <section>
-            <h2 class="text-2xl font-bold mb-2 mt-10">🔥 Welcome to Payooo!</h2>
-            <p class="text-gray-600">Enjoy easy and convenient financial services with us. Cashout charge is low and
-            </p>
-        </section>
-        <!--Option section-->
-        <section>
-            <div class="grid grid-cols-3 gap-2 mt-5">
-                <div class="place-items-center p-2 pt-4  border-2  border-gray-300 rounded-md hover:border-blue-500">
-                    <img src="./assets/wallet 1.png" alt="">
-                    <h2 class="text-sm font-bold hover:text-blue-500 ">Add Money</h2>
-                </div>
-                <div class="place-items-center p-4  border-2  border-gray-300 rounded-md hover:border-blue-500">
-                    <img src="./assets/send 1.png" alt="">
-                    <h2 class="text-sm font-bold hover:text-blue-500 ">Cashout</h2>
-                </div>
-                <div class="place-items-center p-2  border-2  border-gray-300 rounded-md hover:border-blue-500">
-                    <img src="./assets/transaction 1.png" alt="">
-                    <h2 class="text-[12px] font-bold hover:text-blue-500 ">Transfer Money</h2>
-                </div>
-                <div class="place-items-center p-4  border-2  border-gray-300 rounded-md hover:border-blue-500">
-                    <img src="./assets/financial 1.png" alt="">
-                    <h2 class="text-sm font-bold hover:text-blue-500 ">Get Bonus</h2>
-                </div>
-                <div class="place-items-center p-4  border-2  border-gray-300 rounded-md hover:border-blue-500">
-                    <img src="./assets/money 1.png" alt="">
-                    <h2 class="text-sm font-bold hover:text-blue-500 ">Pay Bill</h2>
-                </div>
-                <div class="place-items-center p-4  border-2  border-gray-300 rounded-md hover:border-blue-500">
-                    <img src="./assets/purse 1.png" alt="">
-                    <h2 class="text-sm font-bold hover:text-blue-500 ">Transactions</h2>
-                </div>
-            </div>
-        </section>
-        <!--Add Monet Form-->
-        <div class="h-full mt-7">
-            <h1 class="text-lg font-bold text-center mb-4">Add Money</h1>
-            <div class="hero-content flex-col lg:flex-row-reverse">
-              <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
-                <form class="card-body">
-                  <!--Select part-->
-                  <h2 class="text-sm font-semibold">Select bank</h2>
-                  <select class="select w-full max-w-xs">
-                    <option disabled selected>Choose a bank</option>
-                    <option>IBBL</option>
-                    <option>AFBL</option>
-                    <option>UCB</option>
-                  </select>
-                  <div class="form-control">
-                    <label class="label">
-                      <span class="label-text">A/C Number</span>
-                    </label>
-                    <input type="number" id="accountNumber" maxlength="11" placeholder="A/C" class="input input-bordered" required />
-                  </div>
-                  <div class="form-control">
-                    <label class="label">
-                      <span class="label-text">Amount</span>
-                    </label>
-                    <input type="number" id="amount" placeholder="Amount" class="input input-bordered" required />
-                  </div>
-                  <div class="form-control">
-                    <label class="label">
-                      <span class="label-text">PIN</span>
-                    </label>
-                    <input type="password" id="pin" placeholder="Enter 4-digit PIN" class="input input-bordered" required />
-                    <label class="label">
-                      <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-                    </label>
-                  </div>
-                  <div class="form-control mt-6">
-                    <button id="addMoney-btn" class="btn bg-blue-700 text-white hover:bg-blue-500">Add Money</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
+      </div>
+      <button id="leave-btn" class="btn border-slate-200 bg-blue-400 hover:bg-sky-300 text-white"><img src="./assets/Frame.png" alt="">
+        Log Out</button>
+    </div>
+    <hr class="border-[black]">
+    <!--Welcome part-->
+    <section>
+      <h2 class="text-2xl font-bold mb-2 mt-10">🔥 Welcome to Payooo!</h2>
+      <p class="text-gray-600">Enjoy easy and convenient financial services with us. Cashout charge is low and
+      </p>
     </section>
-    <script src="./script/addMoney.js"></script>
+    <!--Option section-->
+    <section>
+      <div class="grid grid-cols-3 gap-2 mt-10">
+        <div id="addMoney-container"
+          class="place-items-center p-2 pt-4  border-2  border-gray-300 rounded-md hover:border-blue-500">
+          <img src="./assets/wallet 1.png" alt="">
+          <h2 class="text-sm font-bold hover:text-blue-500 ">Add Money</h2>
+        </div>
+        <div id="cashOut-container"
+          class="place-items-center p-4  border-2  border-gray-300 rounded-md hover:border-blue-500">
+          <img src="./assets/send 1.png" alt="">
+          <h2 class="text-sm font-bold hover:text-blue-500 ">Cashout</h2>
+        </div>
+        <div class="place-items-center p-2 pt-4 border-2  border-gray-300 rounded-md hover:border-blue-500">
+          <img src="./assets/transaction 1.png" alt="">
+          <h2 class="text-[12px] font-bold hover:text-blue-500 ">Transfer Money</h2>
+        </div>
+        <div class="place-items-center p-4  border-2  border-gray-300 rounded-md hover:border-blue-500">
+          <img src="./assets/financial 1.png" alt="">
+          <h2 class="text-sm font-bold hover:text-blue-500 ">Get Bonus</h2>
+        </div>
+        <div class="place-items-center p-4  border-2  border-gray-300 rounded-md hover:border-blue-500">
+          <img src="./assets/money 1.png" alt="">
+          <h2 class="text-sm font-bold hover:text-blue-500 ">Pay Bill</h2>
+        </div>
+        <div class="place-items-center p-4  border-2  border-gray-300 rounded-md hover:border-blue-500">
+          <img src="./assets/purse 1.png" alt="">
+          <h2 class="text-sm font-bold hover:text-blue-500 ">Transactions</h2>
+        </div>
+      </div>
+    </section>
+    <!--Add Money Form-->
+    <section id="add-money">
+      <div class="h-full mt-7">
+        <h1 class="text-lg font-bold text-center mb-4">Add Money</h1>
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <!--Select part-->
+              <h2 class="text-sm font-semibold">Select bank</h2>
+              <select class="select w-full max-w-xs">
+                <option disabled selected>Choose a bank</option>
+                <option>IBBL</option>
+                <option>AFBL</option>
+                <option>UCB</option>
+              </select>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">A/C Number</span>
+                </label>
+                <input type="number" id="accountNumber" maxlength="11" placeholder="A/C" class="input input-bordered"
+                  required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount</span>
+                </label>
+                <input type="number" id="amount" placeholder="Amount" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">PIN</span>
+                </label>
+                <input type="password" id="pin" placeholder="Enter 4-digit PIN" class="input input-bordered" required />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                </label>
+              </div>
+              <div class="form-control mt-6">
+                <button id="addMoney-btn" class="btn bg-blue-700 text-white hover:bg-blue-500">Add Money</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Cash Out Section-->
+    <section id="cashOut">
+      <div class="h-full mt-7">
+        <h1 class="text-lg font-bold text-center mb-4">Cash Out</h1>
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Agent Number</span>
+                </label>
+                <input type="number" id="agentNumber" maxlength="11" placeholder="A/C" class="input input-bordered"
+                  required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount</span>
+                </label>
+                <input type="number" id="cash-amount" placeholder="Amount" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">PIN</span>
+                </label>
+                <input type="password" id="cash-pin" placeholder="Enter 4-digit PIN" class="input input-bordered" required />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                </label>
+              </div>
+              <div class="form-control mt-6">
+                <button id="cashOut-btn" class="btn bg-blue-700 text-white hover:bg-blue-500">Cash Out</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <script src="./script/addmoney.js"></script>
 </body>
+
 </html>
