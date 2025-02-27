@@ -46,12 +46,17 @@ document
   .getElementById("cashOut-btn")
   .addEventListener("click", function (event) {
     event.preventDefault();
+
     const pin = document.getElementById("cash-pin").value;
     const convertedPin = parseInt(pin);
+    
     const amount = document.getElementById("cash-amount").value;
     convertedAmount = parseFloat(amount);
+
     const mainBalance = document.getElementById("mainbalance").innerText;
     const convertedMainBalance = parseFloat(mainBalance);
+
+
     if (convertedPin === 1345) {
       const sum = convertedMainBalance - convertedAmount;
       document.getElementById("mainbalance").innerText = sum;
